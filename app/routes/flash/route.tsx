@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Button } from "~/components/ui/button"
 import { Input } from "~/components/ui/input"
 import AnswerDialog from "./_components/answer-dialog"
 
@@ -33,31 +32,36 @@ export default function FlashPage() {
   }, [time])
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 p-8">
-      <div className="flex h-80 w-full flex-col items-center justify-center bg-green-950">
+    <div className="flex h-screen flex-col items-center space-y-4 bg-amber-200 p-8">
+      <div className="flex h-80 w-full flex-col items-center justify-center border-8 border-orange-600 bg-green-950">
         {flash.map((i) => (
           <p key={i.toString()} className="text-9xl text-white">
             {i}
           </p>
         ))}
       </div>
-      <div className="flex space-x-2">
+      {/* <div className="flex space-x-2">
         <Button onClick={() => setTime(1000)} variant={"outline"}>
           {"1000"}
         </Button>
         <Button onClick={() => setTime(500)} variant={"outline"}>
           {"500"}
         </Button>
-      </div>
-      <div className="flex gap-x-4">
+      </div> */}
+      <div className="flex w-full gap-x-4 p-4">
         <Input
-          placeholder={"答えを入力してください"}
+          placeholder={"半角の数字で答えを入力してください"}
           onChange={(event) => {
             const inputValue = event.target.value
             setAnswer(inputValue)
           }}
+          className="bg-white"
         />
-        <AnswerDialog answer={answer} flashSum={flashSum} />
+        <AnswerDialog
+          answer={answer}
+          flashSum={flashSum}
+          setAnswer={setAnswer}
+        />
       </div>
       {/* <div className="flex space-x-2">
         <Button onClick={() => setCount(3)}>{"3"}</Button>

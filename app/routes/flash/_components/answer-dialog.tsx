@@ -11,23 +11,23 @@ import {
 type Props = {
   answer: string
   flashSum: number
+  setAnswer: (value: string) => void
 }
 
 export default function AnswerDialog(props: Props) {
   return (
     <Dialog>
-      <DialogTrigger
-        asChild
-        // onClick={() => {
-        //   if (props.answer === props.flashSum.toString()) {
-        //     alert("正解")
-        //   }
-        //   if (props.answer !== props.flashSum.toString()) {
-        //     alert("不正解")
-        //   }
-        // }}
-      >
-        <Button variant="outline">{"確定"}</Button>
+      <DialogTrigger asChild>
+        <Button
+          variant="outline"
+          disabled={props.answer === ""}
+          onClick={() => {
+            props.setAnswer("")
+          }}
+          className="bg-white text-black"
+        >
+          {"確定"}
+        </Button>
       </DialogTrigger>
       {props.answer === props.flashSum.toString() && (
         <DialogContent className="bg-white sm:max-w-[425px]">

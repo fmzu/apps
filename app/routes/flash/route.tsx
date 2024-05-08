@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Input } from "~/components/ui/input"
 import AnswerDialog from "./_components/answer-dialog"
+import { Button } from "~/components/ui/button"
 
 export default function FlashPage() {
   const [flash, setFlash] = useState<[number]>([0])
@@ -11,9 +12,12 @@ export default function FlashPage() {
 
   const [flashSum, setFlashSum] = useState(0)
 
+  const [started, setStarted] = useState(false)
+
   // const [count, setCount] = useState(3)
 
   useEffect(() => {
+    if (!started) return
     const timeOut = setInterval(() => {
       /**
        * 0以上1未満のランダムな数値を生成する
@@ -29,16 +33,23 @@ export default function FlashPage() {
       console.log("aa", setFlashSum(sum))
     }, time)
     return () => clearInterval(timeOut)
-  }, [time])
+  }, [time, started])
 
   return (
     <div className="flex h-screen flex-col items-center space-y-4 bg-amber-200 p-8">
-      <div className="flex h-80 w-full flex-col items-center justify-center border-8 border-orange-600 bg-green-950">
+      <div className="flex h-80 w-full flex-col items-center justify-center space-y-4 border-8 border-orange-600 bg-green-950">
         {flash.map((i) => (
           <p key={i.toString()} className="text-9xl text-white">
             {i}
           </p>
         ))}
+        <Button
+          onClick={() => setStarted(true)}
+          variant={"outline"}
+          className="text-white text-xl"
+        >
+          {"START!!!"}
+        </Button>
       </div>
       {/* <div className="flex space-x-2">
         <Button onClick={() => setTime(1000)} variant={"outline"}>

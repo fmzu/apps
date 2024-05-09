@@ -45,28 +45,32 @@ export default function FortunePage() {
       title: "大吉",
       description: "大吉です！良い日になりますように！",
       image:
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimpKtspceL47HWV8CIjCG83OLzaXss2VrjPQt65pfItad0LzQVB13lABAZ8zvViixYeemTkX9O3F2W9vfmDrv2u00nRzGmVD4OIj81oM6zOk84edl8Loj2BvpLIkT4TgWCiPJr4YMSzQZE/s180-c/omikuji_daikichi.png",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZ4saXQS_vHBKazM9OJF2wxyuXyeN_zaqiAQ1iteC7r9ZK8t5XyJqnntVFsaGvv7oQFv5t1BjUmzt8Bi1P6fYSSdmWlcd36nzgxNmeB39DkQe6j2qU63C8eyn47jGeqKh5L_imU2V0S3PD/s800/dog_miniature_dachshund.png",
     },
     2: {
       title: "中吉",
-      description: "中吉です！何事もほどほどくらいがちょうどいいです！",
-      image: "https://www.irasutoya.com/2012/04/blog-post_5459.html",
+      description: "中吉です！何事もほどほどくらいがちょうどいいですよ！",
+      image:
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj43Qf67CecA7zIR3NJUaooyxmvqD3e1O4x7qxMCMJgudBM7tE7TxP7cy-lT6m8roSpsdfQa3NZNikCVnPk-s2rpQkaZxQJ2pyjha1R-SohqlG5pH7CKev51j3Z9I19Pmakyhmgn4Gcj_W5/s180-c/hamster_sleeping_golden.png",
     },
     3: {
       title: "小吉",
       description: "小吉です！小さな幸せがたくさん訪れます！",
-      image: "https://www.irasutoya.com/2012/04/blog-post_5459.html",
+      image:
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-CddTy25iWDx4gsP0QvHC8Qlach696Od-B26GSPJaQFS9FoJ7HIqiMuFssOUWBaHe3MPhqvymLmOeHy7tjTrX4uVI3Sqk8bW-ftEA6bfhQmTbA1muXmfrDVDHYxp27Y-qi0QH2qMNnXRT/s180-c/cat_sabineko.png",
     },
     4: {
       title: "凶",
       description: "凶です！今日は得を積んでいきましょう！",
-      image: "https://www.irasutoya.com/2012/04/blog-post_5459.html",
+      image:
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKOHoLru5H0fchEUhNLRAdtrfYPEVZcBzaDtobRXibei7Q0OgLJVlP087HCpudg4yFx2acDKLPYWVEYkTCkDnxfnH7xEfTf1QalN70QpT_8eQs4S2JVxFSf_T7aPOuAuOCNgRDDyCW-JI_/s180-c/animal_alpaca_huacaya.png",
     },
     5: {
       title: "大凶",
       description:
         "大凶です！が！悪い運気はこのサイトに置いていくので大丈夫です！",
-      image: "https://www.irasutoya.com/2012/04/blog-post_5459.html",
+      image:
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh05bFfvysjY5SwF1P_VKuIWSpZz6K3mlqFnA2uQUyGXUV51_FuiQG_uXkguwOnasKPgWV9S41KbSdxWrlbNofq1Yd5wC4_m3wY9obQeklvu-gHpov5xpCwX9MErbfrE4xvmmBob6r5oHvs/s180-c/animal_okojo_summer.png",
     },
   }
 

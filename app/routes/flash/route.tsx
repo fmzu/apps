@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Input } from "~/components/ui/input"
 import AnswerDialog from "./_components/answer-dialog"
 import { Button } from "~/components/ui/button"
 
@@ -7,8 +6,6 @@ export default function FlashPage() {
   const [flash, setFlash] = useState<[number]>([0])
 
   const [time, setTime] = useState(1000)
-
-  const [answer, setAnswer] = useState("")
 
   const [flashSum, setFlashSum] = useState(0)
 
@@ -59,21 +56,7 @@ export default function FlashPage() {
           {"500"}
         </Button>
       </div> */}
-      <div className="flex w-full gap-x-4 p-4">
-        <Input
-          placeholder={"半角の数字で答えを入力してください"}
-          onChange={(event) => {
-            const inputValue = event.target.value
-            setAnswer(inputValue)
-          }}
-          className="bg-white"
-        />
-        <AnswerDialog
-          answer={answer}
-          flashSum={flashSum}
-          setAnswer={setAnswer}
-        />
-      </div>
+      <AnswerDialog flashSum={flashSum} />
       {/* <div className="flex space-x-2">
         <Button onClick={() => setCount(3)}>{"3"}</Button>
         <Button onClick={() => setCount(5)}>{"5"}</Button>

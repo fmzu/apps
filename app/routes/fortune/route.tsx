@@ -45,32 +45,32 @@ export default function FortunePage() {
       title: "大吉",
       description: "大吉です！良い日になりますように！",
       image:
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZ4saXQS_vHBKazM9OJF2wxyuXyeN_zaqiAQ1iteC7r9ZK8t5XyJqnntVFsaGvv7oQFv5t1BjUmzt8Bi1P6fYSSdmWlcd36nzgxNmeB39DkQe6j2qU63C8eyn47jGeqKh5L_imU2V0S3PD/s800/dog_miniature_dachshund.png",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgi_nfe6sUsA9El67mO1g5bzrLpAuA_l1UffQvMSIS4xJBsDm4nrEa6ud4a_TNCiEMPKzCBgIrw5B2M13Z-Pnj0xgzTEZDJG1rw5btr9IU3ZEumWF6ULJMaWV_454iU1D_0csdaE_VfW3FO/s180-c/animalface_inu.png",
     },
     2: {
       title: "中吉",
       description: "中吉です！何事もほどほどくらいがちょうどいいですよ！",
       image:
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj43Qf67CecA7zIR3NJUaooyxmvqD3e1O4x7qxMCMJgudBM7tE7TxP7cy-lT6m8roSpsdfQa3NZNikCVnPk-s2rpQkaZxQJ2pyjha1R-SohqlG5pH7CKev51j3Z9I19Pmakyhmgn4Gcj_W5/s180-c/hamster_sleeping_golden.png",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-qZ8JzoZJPHXKJxSnF8Og9F6n13etlS7AYQkKi7iMMGK4HmLT7uFVLLDZQ9tl5zGYuPH93S9TvSxOK54gFdGm4O0xMYx23zd6evKr83egqJAdkORWDnVW_czyZECBUXx6Wc3K1ujxiOY0/s180-c/animalface_neko.png",
     },
     3: {
       title: "小吉",
       description: "小吉です！小さな幸せがたくさん訪れます！",
       image:
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-CddTy25iWDx4gsP0QvHC8Qlach696Od-B26GSPJaQFS9FoJ7HIqiMuFssOUWBaHe3MPhqvymLmOeHy7tjTrX4uVI3Sqk8bW-ftEA6bfhQmTbA1muXmfrDVDHYxp27Y-qi0QH2qMNnXRT/s180-c/cat_sabineko.png",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4a1vvAc4Wm74WATWPGdOkOtPdcpyqtNkoytzdTg10rTStJdMhQxcwKHhOXBa-hsWrk0iVgtDTTOmSmwwMk5vfvtiwXCrIvFoizIOE_-pKctGlcac5sdOqn7Bf1XG1X2xRKBkaLwKC_0zn/s180-c/animalface_hitsuji.png",
     },
     4: {
       title: "凶",
       description: "凶です！今日は得を積んでいきましょう！",
       image:
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKOHoLru5H0fchEUhNLRAdtrfYPEVZcBzaDtobRXibei7Q0OgLJVlP087HCpudg4yFx2acDKLPYWVEYkTCkDnxfnH7xEfTf1QalN70QpT_8eQs4S2JVxFSf_T7aPOuAuOCNgRDDyCW-JI_/s180-c/animal_alpaca_huacaya.png",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEief0jlQMQFPYXsA7ENsXPzDMZfwjWj_mHYt3OMiQQdDD8v73yS6AT86G4lX_iPvkPx9RCuFV8y-CbPOUL5konZZmCSFb1pfGVMixqeZUWGNURPOzur3WuYYZom9qBrngjHdwrrRYAcyktw/s180-c/animalface_araiguma.png",
     },
     5: {
       title: "大凶",
       description:
         "大凶です！が！悪い運気はこのサイトに置いていくので大丈夫です！",
       image:
-        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh05bFfvysjY5SwF1P_VKuIWSpZz6K3mlqFnA2uQUyGXUV51_FuiQG_uXkguwOnasKPgWV9S41KbSdxWrlbNofq1Yd5wC4_m3wY9obQeklvu-gHpov5xpCwX9MErbfrE4xvmmBob6r5oHvs/s180-c/animal_okojo_summer.png",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiofywA44EM7IlWA5LLw0bI4ldFfMrDeINyP57YXK83IEgB2bQoYMAcXeQZDmQYQ6Nijh86OEG47BrecvTg0ai3paWfmJ0-RX1e7THI11fhhO2YX7FuRDr4LyvUa6RZWftJB4uNUrR7WXlj/s180-c/animalface_usagi.png",
     },
   }
 
@@ -86,8 +86,8 @@ export default function FortunePage() {
             {"TAP!!!"}
           </Button>
         </DialogTrigger>
-        <DialogContent className="max-w-lg bg-white">
-          <DialogHeader>
+        <DialogContent className="flex flex-col items-center justify-center bg-white">
+          <DialogHeader className="flex items-center justify-center">
             <DialogTitle>
               {resultDialogs[random as keyof typeof resultDialogs].title}
             </DialogTitle>
@@ -98,6 +98,7 @@ export default function FortunePage() {
               <img
                 src={resultDialogs[random as keyof typeof resultDialogs].image}
                 alt=""
+                className="h-32 w-32"
               />
             </div>
           </DialogHeader>

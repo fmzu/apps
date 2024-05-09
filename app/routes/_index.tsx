@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node"
+import TopCard from "./_components/top-card"
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,8 +10,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <a href="/flash" className="text-lime-300">
-      {"flash"}
-    </a>
+    <div className="flex p-8">
+      <TopCard />
+    </div>
   )
 }

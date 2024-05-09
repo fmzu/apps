@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex p-8">
+    <div className="flex space-x-4 p-8">
       <TopCard />
     </div>
   )

@@ -48,6 +48,7 @@ export default function FlashPage() {
           {"START!!!"}
         </Button>
       </div>
+      <AnswerDialog flashSum={flashSum} />
       {/* <div className="flex space-x-2">
         <Button onClick={() => setTime(1000)} variant={"outline"}>
           {"1000"}
@@ -56,7 +57,6 @@ export default function FlashPage() {
           {"500"}
         </Button>
       </div> */}
-      <AnswerDialog flashSum={flashSum} />
       {/* <div className="flex space-x-2">
         <Button onClick={() => setCount(3)}>{"3"}</Button>
         <Button onClick={() => setCount(5)}>{"5"}</Button>

@@ -23,23 +23,6 @@ export default function FortunePage() {
   // const handleClick = () => {
   //   const randoms = Math.floor(Math.random() * results.length)
 
-  //   if (randoms === 1) {
-  //     alert("大吉")
-  //   }
-  //   if (randoms === 2) {
-  //     alert("中吉")
-  //   }
-  //   if (randoms === 3) {
-  //     alert("小吉")
-  //   }
-  //   if (randoms === 4) {
-  //     alert("凶")
-  //   }
-  //   if (randoms === 5) {
-  //     alert("大凶")
-  //   }
-  // }
-
   const resultDialogs = {
     1: {
       title: "大吉",

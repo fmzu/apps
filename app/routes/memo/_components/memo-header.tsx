@@ -8,7 +8,7 @@ import LoginButton from "./login-button"
 export default function MemoHeader() {
   return (
     <div className="flex flex-col">
-      <div className="flex items-center justify-between space-x-4 py-8">
+      <div className="flex h-28 items-center justify-between space-x-4">
         <div className="flex items-center">
           <Button variant="ghost" className="rounded-full">
             <Menu className="w-4" />

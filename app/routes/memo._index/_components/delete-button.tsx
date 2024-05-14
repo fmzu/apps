@@ -12,7 +12,15 @@ export default function DeleteButton() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant="ghost" className="rounded-full">
+          <Button
+            variant="ghost"
+            className="rounded-full"
+            onClick={() => {
+              alert(
+                "メモを削除しました（ゴミ箱にあるときは完全に消えますがいいですか？の表示）",
+              )
+            }}
+          >
             <Trash2 className="w-4" />
           </Button>
         </TooltipTrigger>

@@ -12,7 +12,13 @@ export default function CopyButton() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant="ghost" className="rounded-full">
+          <Button
+            variant="ghost"
+            className="rounded-full"
+            onClick={() => {
+              alert("メモがコピーされました")
+            }}
+          >
             <Copy className="w-4" />
           </Button>
         </TooltipTrigger>

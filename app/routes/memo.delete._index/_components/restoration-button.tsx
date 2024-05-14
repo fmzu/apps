@@ -13,7 +13,13 @@ export default function RestorationButton() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button variant={"ghost"} className="rounded-full">
+          <Button
+            variant={"ghost"}
+            className="rounded-full"
+            onClick={() => {
+              alert("メモを復元しました")
+            }}
+          >
             <Undo2 className="w-4" />
           </Button>
         </TooltipTrigger>

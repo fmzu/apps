@@ -25,8 +25,10 @@ export default function MemoDeletePage() {
               text={"☆削除まであと二日になったら文字が赤くなる"}
             />
             <DeleteMemoCard text={"☆一日未満の時は１日未満って書く"} />
-            <DeleteMemoCard text={"メモの内容"} />
-            <DeleteMemoCard text={"メモの内容"} />
+            <DeleteMemoCard
+              text={"☆ゴミ箱にメモがないときはメモがありませんってかく"}
+            />
+            <DeleteMemoCard text={"☆残り日数少ないメモから並んでいく"} />
             <DeleteMemoCard text={"メモの内容"} />
           </div>
         </div>

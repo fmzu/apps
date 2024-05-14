@@ -4,6 +4,7 @@ import {} from "~/components/ui/tooltip"
 import SearchBox from "./search-box"
 import { Separator } from "~/components/ui/separator"
 import LoginButton from "./login-button"
+import { Link } from "@remix-run/react"
 
 export default function MemoHeader() {
   return (
@@ -13,7 +14,9 @@ export default function MemoHeader() {
           <Button variant="ghost" className="rounded-full">
             <Menu className="w-4" />
           </Button>
-          <p className="text-xl">{"MEMO"}</p>
+          <Link to={"/memo"} className="text-xl">
+            {"MEMO"}
+          </Link>
         </div>
         <SearchBox />
         <LoginButton />

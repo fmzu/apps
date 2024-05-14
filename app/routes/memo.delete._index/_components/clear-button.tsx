@@ -1,29 +1,31 @@
-import { CircleDashed } from "lucide-react"
 import { Button } from "~/components/ui/button"
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "~/components/ui/tooltip"
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogTrigger,
+} from "~/components/ui/dialog"
+import {} from "~/components/ui/tooltip"
 
 export default function ClearButton() {
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button
-            variant="ghost"
-            className="flex items-center justify-center space-x-2 rounded-full"
-          >
-            <CircleDashed className="w-4" />
-            <p>{"クリア"}</p>
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{"ゴミ箱を空にする"}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline">
+          <p>{"ゴミ箱の中身を空にする"}</p>
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="bg-white sm:max-w-[425px]">
+        <div>
+          {
+            "ゴミ箱の中身を空にしますか？ゴミ箱内のメモはすべて完全に削除されます。"
+          }
+        </div>
+        <DialogFooter>
+          <Button variant={"secondary"}>{"キャンセル"}</Button>
+          <Button variant={"ghost"}>{"ゴミ箱を空にする"}</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   )
 }

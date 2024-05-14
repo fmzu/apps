@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-} from "~/components/ui/card"
+import { Card, CardContent, CardDescription } from "~/components/ui/card"
 import ClipButton from "./clip-button"
 import CopyButton from "./copy-button"
 import DeleteButton from "./delete-button"
@@ -19,25 +13,23 @@ type Props = {
 
 export default function MemoCard(props: Props) {
   return (
-    <Card>
-      <CardHeader className="flex items-end justify-end px-4">
-        <ClipButton />
-      </CardHeader>
-      <CardDescription className="px-4">
+    <Card className="p-4">
+      <CardDescription className="flex items-center justify-between">
         <Badge className="outline">{"Badge"}</Badge>
+        <ClipButton />
       </CardDescription>
-      <CardContent className="p-2 pb-4">
-        <div className="flex flex-col items-center justify-center space-y-2">
+      <CardContent className="p-2">
+        <div className="flex flex-col items-center justify-center gap-y-2">
           <p className="flex justify-center">{props.text}</p>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <div className="flex">
         <NotificationButton />
         <CopyButton />
         <ImageAddButton />
         <ShareButton />
         <DeleteButton />
-      </CardFooter>
+      </div>
     </Card>
   )
 }

@@ -1,6 +1,7 @@
 import { Bell, Trash2 } from "lucide-react"
 import {} from "~/components/ui/tooltip"
 import SeriesAccordion from "./series-accordion"
+import { Link } from "@remix-run/react"
 
 export default function MemoNavigation() {
   return (
@@ -12,10 +13,13 @@ export default function MemoNavigation() {
       <div>
         <SeriesAccordion />
       </div>
-      <div className="flex items-center space-x-2 border-b py-8">
+      <Link
+        to={"/memo/delete"}
+        className="flex items-center space-x-2 border-b py-8"
+      >
         <Trash2 className="w-4" />
         <p>{"ゴミ箱"}</p>
-      </div>
+      </Link>
     </div>
   )
 }

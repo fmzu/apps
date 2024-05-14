@@ -10,6 +10,7 @@ import CopyButton from "./copy-button"
 import DeleteButton from "./delete-button"
 import ShareButton from "./share-button"
 import ImageAddButton from "./image-add-button"
+import NotificationButton from "./notification-button"
 import { Badge } from "~/components/ui/badge"
 
 type Props = {
@@ -31,6 +32,7 @@ export default function MemoCard(props: Props) {
         </div>
       </CardContent>
       <CardFooter className="flex justify-between">
+        <NotificationButton />
         <CopyButton />
         <ImageAddButton />
         <ShareButton />

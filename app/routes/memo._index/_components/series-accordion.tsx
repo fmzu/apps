@@ -1,4 +1,4 @@
-import { SquareMenu } from "lucide-react"
+import { Tag } from "lucide-react"
 import {
   Accordion,
   AccordionContent,
@@ -12,8 +12,8 @@ export default function SeriesAccordion() {
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger className="flex items-center space-x-2 border-b py-8">
-          <SquareMenu className="w-4" />
-          <p>{"ジャンル"}</p>
+          <Tag className="w-4" />
+          <p>{"ラベル"}</p>
         </AccordionTrigger>
         <AccordionContent className="space-y-4">
           <div>

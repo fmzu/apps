@@ -12,9 +12,13 @@ import ShareButton from "./share-button"
 import ImageAddButton from "./image-add-button"
 import { Badge } from "~/components/ui/badge"
 
-export default function MemoCard() {
+type Props = {
+  text: string
+}
+
+export default function MemoCard(props: Props) {
   return (
-    <Card className="w-screen lg:w-1/3 md:w-1/2">
+    <Card>
       <CardHeader className="flex items-end justify-end px-4">
         <ClipButton />
       </CardHeader>
@@ -23,7 +27,7 @@ export default function MemoCard() {
       </CardDescription>
       <CardContent className="p-2 pb-4">
         <div className="flex flex-col items-center justify-center space-y-2">
-          <p className="flex justify-center">{"memo"}</p>
+          <p className="flex justify-center">{props.text}</p>
         </div>
       </CardContent>
       <CardFooter className="flex justify-between">

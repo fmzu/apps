@@ -10,8 +10,9 @@ type Props = {
 export default function DeleteMemoCard(props: Props) {
   return (
     <Card className="p-4">
-      <CardDescription>
+      <CardDescription className="flex items-center justify-between space-x-2">
         <Badge className="outline">{"Badge"}</Badge>
+        <p className="text-xs">{"3日"}</p>
       </CardDescription>
       <CardContent className="p-2">
         <div className="flex flex-col items-center justify-center gap-y-2">

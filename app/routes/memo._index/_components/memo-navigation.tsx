@@ -6,10 +6,13 @@ import BadgeAddDialog from "./badge-add-dialog"
 export default function MemoNavigation() {
   return (
     <div className="flex w-96 flex-col border-r">
-      <div className="flex items-center space-x-2 border-b py-8">
+      <Link
+        to={"/memo/notification"}
+        className="flex items-center space-x-2 border-b py-8"
+      >
         <Bell className="w-4" />
         <p>{"通知"}</p>
-      </div>
+      </Link>
       <BadgeAddDialog />
       <div className="flex items-center space-x-2 border-b py-8">
         <Badge className="w-4" />

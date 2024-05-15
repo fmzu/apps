@@ -6,6 +6,7 @@ import ShareButton from "./share-button"
 import ImageAddButton from "./image-add-button"
 import NotificationButton from "./notification-button"
 import { Badge } from "~/components/ui/badge"
+import ArchiveButton from "./archive-button"
 
 type Props = {
   text: string
@@ -28,6 +29,7 @@ export default function MemoCard(props: Props) {
         <CopyButton />
         <ImageAddButton />
         <ShareButton />
+        <ArchiveButton />
         <DeleteButton />
       </div>
     </Card>

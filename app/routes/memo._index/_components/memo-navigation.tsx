@@ -1,7 +1,7 @@
-import { Bell, Trash2 } from "lucide-react"
+import { ArchiveRestore, Bell, Badge, Trash2 } from "lucide-react"
 import {} from "~/components/ui/tooltip"
-import SeriesAccordion from "./series-accordion"
 import { Link } from "@remix-run/react"
+import BadgeAddDialog from "./badge-add-dialog"
 
 export default function MemoNavigation() {
   return (
@@ -10,8 +10,22 @@ export default function MemoNavigation() {
         <Bell className="w-4" />
         <p>{"通知"}</p>
       </div>
-      <div>
-        <SeriesAccordion />
+      <BadgeAddDialog />
+      <div className="flex items-center space-x-2 border-b py-8">
+        <Badge className="w-4" />
+        <p>{"TypeScript"}</p>
+      </div>
+      <div className="flex items-center space-x-2 border-b py-8">
+        <Badge className="w-4" />
+        <p>{"CloudFlare"}</p>
+      </div>
+      <div className="flex items-center space-x-2 border-b py-8">
+        <Badge className="w-4" />
+        <p>{"Remix"}</p>
+      </div>
+      <div className="flex items-center space-x-2 border-b py-8">
+        <ArchiveRestore className="w-4" />
+        <p>{"アーカイブ"}</p>
       </div>
       <Link
         to={"/memo/delete"}

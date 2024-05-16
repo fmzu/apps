@@ -7,7 +7,7 @@ type Props = {
   title: string
 }
 
-export default function TopCard(props: Props) {
+export function TopCard(props: Props) {
   return (
     <Card>
       <CardContent>

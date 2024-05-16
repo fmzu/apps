@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node"
-import TopCard from "./_components/top-card"
+import { TopCard } from "~/components/top-card"
 
 export const meta: MetaFunction = () => {
   return [

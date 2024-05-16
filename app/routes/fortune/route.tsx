@@ -59,11 +59,11 @@ export default function FortunePage() {
 
   return (
     <div className="flex h-screen items-center justify-center space-x-4 bg-pink-300">
-      <p className="text-white">{"fortune"}</p>
+      <p>{"fortune"}</p>
       <Dialog>
         <DialogTrigger asChild>
           <Button
-            className="items-center rounded-full bg-white text-pink-400"
+            className="items-center rounded-full bg-white"
             onClick={handleClick}
           >
             {"TAP!!!"}

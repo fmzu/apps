@@ -59,17 +59,17 @@ export default function FortunePage() {
 
   return (
     <div className="flex h-screen items-center justify-center space-x-4 bg-pink-300">
-      <p>{"fortune"}</p>
+      <p className="text-white">{"fortune"}</p>
       <Dialog>
         <DialogTrigger asChild>
           <Button
             className="items-center rounded-full bg-white"
             onClick={handleClick}
           >
-            {"TAP!!!"}
+            <p className="text-pink-400">{"TAP!!!"}</p>
           </Button>
         </DialogTrigger>
-        <DialogContent className="flex flex-col items-center justify-center bg-white">
+        <DialogContent className="flex flex-col items-center justify-center">
           <DialogHeader className="flex items-center justify-center">
             <DialogTitle>
               {resultDialogs[random as keyof typeof resultDialogs].title}

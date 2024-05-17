@@ -1,6 +1,5 @@
 import type { MetaFunction } from "@remix-run/node"
 import { useChat } from "ai/react"
-import { Input } from "~/components/ui/input"
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,7 +22,7 @@ export default function Index() {
           ))
         : null}
       <form onSubmit={handleSubmit}>
-        <Input
+        <input
           className="fixed bottom-0 mb-8 w-full max-w-md rounded border border-gray-300 p-2 shadow-xl"
           value={input}
           placeholder="どうしましたか？"

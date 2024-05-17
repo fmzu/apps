@@ -16,7 +16,7 @@ export default function LoginButton() {
       <DialogTrigger asChild>
         <Button variant={"ghost"}>{"ログイン"}</Button>
       </DialogTrigger>
-      <DialogContent className="bg-white">
+      <DialogContent>
         <DialogHeader>
           <DialogTitle>{"ログイン"}</DialogTitle>
         </DialogHeader>

@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react"
 import { useState } from "react"
 import { Button } from "~/components/ui/button"
 import {
@@ -32,7 +31,6 @@ export default function AnswerDialog(props: Props) {
         onChange={(event) => {
           setAnswer(event.target.value)
         }}
-        className="bg-white"
         onKeyDown={(event) => {
           if (event.key === "Enter") {
             setAnswer("")
@@ -41,11 +39,7 @@ export default function AnswerDialog(props: Props) {
       />
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            disabled={answer === ""}
-            className="bg-white text-black"
-          >
+          <Button variant="outline" disabled={answer === ""}>
             {"確定"}
           </Button>
         </DialogTrigger>
@@ -59,10 +53,10 @@ export default function AnswerDialog(props: Props) {
               <img src={correctImage} alt="正解" />
             </div>
             <DialogFooter className="flex items-center">
-              <Button className="flex items-center">
+              {/* <Button className="flex items-center">
                 {"次の問題へ"}
                 <ArrowRight className="w-4" />
-              </Button>
+              </Button> */}
             </DialogFooter>
           </DialogContent>
         )}
@@ -78,10 +72,10 @@ export default function AnswerDialog(props: Props) {
               <img src={incorrectImage} alt="正解" />
             </div>
             <DialogFooter className="flex items-center">
-              <Button>
+              {/* <Button>
                 {"次の問題へ"}
                 <ArrowRight className="w-4" />
-              </Button>
+              </Button> */}
             </DialogFooter>
           </DialogContent>
         )}

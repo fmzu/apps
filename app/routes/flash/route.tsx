@@ -43,7 +43,7 @@ export default function FlashPage() {
         <Button
           onClick={() => setStarted(true)}
           variant={"outline"}
-          className="text-white text-xl"
+          className="text-xl"
         >
           {"START!!!"}
         </Button>

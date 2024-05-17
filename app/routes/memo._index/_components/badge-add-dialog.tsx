@@ -13,12 +13,12 @@ export default function BadgeAddDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="flex items-center justify-start space-x-2 border-b py-8 pl-0">
-          <Badge className="w-4" />
-          <p>{"バッジの追加・編集"}</p>
+        <Button className="flex h-20 items-center justify-start space-x-2 bg-white pl-0">
+          <Badge className="w-4 text-black" />
+          <p className="font-normal text-black">{"バッジの追加・編集"}</p>
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-white">
+      <DialogContent>
         <DialogHeader>
           <DialogTitle>{"バッジ"}</DialogTitle>
         </DialogHeader>

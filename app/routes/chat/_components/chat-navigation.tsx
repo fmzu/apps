@@ -16,12 +16,12 @@ export default function ChatNavigation() {
       <Separator orientation="vertical" />
       <div className="flex w-full flex-col px-4">
         <div className="flex h-16 items-center">
-          <p>{"履歴"}</p>
+          <p className="font-bold">{"履歴"}</p>
         </div>
         <Separator />
         <div className="flex h-24 items-center space-x-2">
           <Avatar>
-            <AvatarImage src={iconImage} alt="@shadcn" />
+            <AvatarImage src={iconImage} alt="iconImage" />
             <AvatarFallback>{"CN"}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">

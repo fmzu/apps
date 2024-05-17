@@ -3,7 +3,8 @@ import { Separator } from "~/components/ui/separator"
 
 export default function ChatNavigation() {
   const iconImage =
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgi6Dq-l2hCFIw6NfNFkRaMoix2lp5Maphyphenhyphen8suVq2k54PkN0xyXlezTVVR8nq6fnhcs5jmFdTQW2YUvNvzSbQEYnDAkgnGOLFldkQ0Bnqpn1Q-e-r-S1CAe3MtvEK7K_KDwxN4R8agM4NA/s180-c/pose_burikko.png"
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQ0Rt_D5XNRWZ9ml1fe39qosoTwotUwGotjtghs17btdS-iHGkU_2-05n56v3XRZoNfQ-FO7zNUNRDxdTkFvJhqvhlHwoaUyjrCyzEiOFPJ568w3PFs31k_z89fQ0eNppyrb93-26KTf1/s180-c/otaku_girl_fashion.png"
+
   return (
     <div className="flex h-screen w-96 border-r">
       <div className="flex w-20 flex-col items-center pt-4">

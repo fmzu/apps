@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node"
 import { useChat } from "ai/react"
 import ChatNavigation from "./_components/chat-navigation"
+import { Input } from "~/components/ui/input"
+import { Separator } from "~/components/ui/separator"
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,9 +15,13 @@ export default function Index() {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex h-screen space-x-4">
       <ChatNavigation />
-      <div className="stretch mx-auto flex w-full max-w-md flex-col py-24">
+      <div className="flex w-full flex-col">
+        <div className="flex h-16 items-center">
+          <p className="font-bold">{"AIbotちゃん"}</p>
+        </div>
+        <Separator />
         {messages.length > 0
           ? messages.map((m) => (
               <div key={m.id} className="whitespace-pre-wrap">
@@ -25,10 +31,9 @@ export default function Index() {
             ))
           : null}
 
-        <div className="flex justify-center">
+        <div className="fixed bottom-0 mb-8">
           <form onSubmit={handleSubmit}>
-            <input
-              className="fixed bottom-0 mb-8 w-full max-w-md rounded border border-gray-300 p-2 shadow-xl"
+            <Input
               value={input}
               placeholder="メッセージを入力"
               onChange={handleInputChange}

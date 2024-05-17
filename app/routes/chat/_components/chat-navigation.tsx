@@ -9,7 +9,7 @@ export default function ChatNavigation() {
     <div className="flex h-screen w-96 border-r">
       <div className="flex w-20 flex-col items-center pt-4">
         <Avatar>
-          <AvatarImage src={iconImage} alt="@shadcn" />
+          <AvatarImage src={iconImage} alt="iconImage" />
           <AvatarFallback>{"CN"}</AvatarFallback>
         </Avatar>
       </div>

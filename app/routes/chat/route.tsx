@@ -17,7 +17,7 @@ export default function Index() {
   return (
     <div className="flex h-screen space-x-4">
       <ChatNavigation />
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col pr-2">
         <div className="flex h-16 items-center">
           <p className="font-bold">{"AIbotちゃん"}</p>
         </div>
@@ -31,7 +31,7 @@ export default function Index() {
             ))
           : null}
 
-        <div className="fixed bottom-0 mb-8">
+        <div className="fixed bottom-0 mb-8 flex flex-1">
           <form onSubmit={handleSubmit}>
             <Input
               value={input}

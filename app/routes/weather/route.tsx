@@ -23,7 +23,14 @@ export default function WeatherPage() {
   }, [])
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
       {data ? (
         <div>
           <h1>{"現在の東京の天気"}</h1>

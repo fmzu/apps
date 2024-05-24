@@ -1,51 +1,30 @@
-import { useState, useEffect } from "react"
-import "./styles.css"
+import { useLoaderData } from "@remix-run/react"
+
+export async function loader() {
+  const response = await fetch(
+    "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m&hourly=temperature_2m&timezone=Asia%2FTokyo&forecast_days=1",
+  )
+  if (!response.ok) {
+    throw new Response("ネットワークエラーが発生しました", { status: 500 })
+  }
+  return await response.json()
+}
 
 export default function WeatherPage() {
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-    fetch(
-      "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m&hourly=temperature_2m&timezone=Asia%2FTokyo&forecast_days=1",
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("ネットワークエラーが発生しました")
-        }
-        return response.json()
-      })
-      .then((data) => {
-        setData(data)
-      })
-      .catch((error) => {
-        console.error("Fetch APIでエラーが発生しました:", error)
-      })
-  }, [])
+  const data = useLoaderData<typeof loader>()
+  console.log("data", data)
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      {data ? (
-        <div>
-          <h1>{"現在の東京の天気"}</h1>
-          <p>
-            {`気温:
-            ${
-              (data as { hourly: { temperature_2m: number[] } }).hourly
-                .temperature_2m[0]
-            }
-            ℃`}
-          </p>
-        </div>
-      ) : (
-        <p>{"読み込み中..."}</p>
-      )}
+    <div className="flex h-screen items-center justify-center space-x-4 bg-cyan-200 p-8">
+      <div>
+        <h1>{"現在の東京の気温"}</h1>
+        <p className="flex justify-center">
+          {`${
+            (data as { current: { temperature_2m: number } }).current
+              .temperature_2m
+          }°C`}
+        </p>
+      </div>
     </div>
   )
 }

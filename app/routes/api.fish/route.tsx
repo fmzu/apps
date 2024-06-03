@@ -80,8 +80,6 @@ export const loader: LoaderFunction = async () => {
     })
   }
 
-  console.log(validationResult.output)
-
   const json = {
     name: validationResult.output.名前,
     classification: validationResult.output.分類,

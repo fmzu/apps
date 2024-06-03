@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => {
   ]
 }
 
-export default function Index() {
+export default function FishPage() {
   const mutation = useMutation({
     async mutationFn() {
       const result = await fetch("/api/fish", {
@@ -31,11 +31,13 @@ export default function Index() {
 
   const isLoading = mutation.status === "pending"
 
+  const fish = mutation.data
+
   return (
     <div className="p-4">
       <Button onClick={onClick}>{isLoading ? "実行中" : "実行"}</Button>
       <pre>{JSON.stringify(mutation.data, null, 2)}</pre>
-      {/* <FishCard name={fish.name} features={fish.features} /> */}
+      <p>{}</p>
     </div>
   )
 }

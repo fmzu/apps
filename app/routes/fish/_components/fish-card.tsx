@@ -17,8 +17,8 @@ export default function FishCard(props: Props) {
     <Card>
       <CardContent>
         <CardHeader>
-          <CardTitle>{"props.name"}</CardTitle>
-          <CardDescription>{"props.features"}</CardDescription>
+          <CardTitle>{props.name}</CardTitle>
+          <CardDescription>{props.features}</CardDescription>
         </CardHeader>
         <div>
           <p>{""}</p>

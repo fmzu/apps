@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node"
 import { useMutation } from "@tanstack/react-query"
 import { Button } from "~/components/ui/button"
+import FishCard from "./_components/fish-card"
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,8 +10,30 @@ export const meta: MetaFunction = () => {
   ]
 }
 
+type FishType = {
+  name: string
+  classification: string
+  appearance: {
+    color: string
+    shape: string
+    features: string
+  }
+  habitat: {
+    ocean_region: string
+    depth: number
+  }
+  habits: {
+    diet: string
+    behavior: string
+  }
+  ecology: {
+    predators: string
+    breed: string
+  }
+}
+
 export default function FishPage() {
-  const mutation = useMutation({
+  const mutation = useMutation<FishType>({
     async mutationFn() {
       const result = await fetch("/api/fish", {
         method: "GET",
@@ -19,7 +42,8 @@ export default function FishPage() {
         },
         // body: JSON.stringify({ message: "Hello, world!" }),
       })
-      return await result.json()
+      const data: FishType = await result.json()
+      return data
     },
   })
 
@@ -31,13 +55,12 @@ export default function FishPage() {
 
   const isLoading = mutation.status === "pending"
 
-  const fish = mutation.data
-
   return (
     <div className="p-4">
       <Button onClick={onClick}>{isLoading ? "実行中" : "実行"}</Button>
       <pre>{JSON.stringify(mutation.data, null, 2)}</pre>
-      <p>{}</p>
+      <p>{mutation.data?.appearance.color}</p>
+      <FishCard name={mutation.data?.name!} features={mutation.data?.appearance.features!} />
     </div>
   )
 }

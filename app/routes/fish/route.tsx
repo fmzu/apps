@@ -2,6 +2,8 @@ import type { MetaFunction } from "@remix-run/node"
 import { useMutation } from "@tanstack/react-query"
 import { Button } from "~/components/ui/button"
 import FishCard from "./_components/fish-card"
+import { hc } from "hono/client"
+import type { Api } from "api/route"
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,40 +12,12 @@ export const meta: MetaFunction = () => {
   ]
 }
 
-type FishType = {
-  name: string
-  classification: string
-  appearance: {
-    color: string
-    shape: string
-    features: string
-  }
-  habitat: {
-    ocean_region: string
-    depth: number
-  }
-  habits: {
-    diet: string
-    behavior: string
-  }
-  ecology: {
-    predators: string
-    breed: string
-  }
-}
-
 export default function FishPage() {
-  const mutation = useMutation<FishType>({
+  const mutation = useMutation({
     async mutationFn() {
-      const result = await fetch("/api/fish", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        // body: JSON.stringify({ message: "Hello, world!" }),
-      })
-      const data: FishType = await result.json()
-      return data
+      const client = hc<Api>("/")
+      const result = await client.api.fish.$get()
+      return await result.json()
     },
   })
 

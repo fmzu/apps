@@ -58,9 +58,18 @@ export default function FishPage() {
   return (
     <div className="p-4">
       <Button onClick={onClick}>{isLoading ? "実行中" : "実行"}</Button>
-      <pre>{JSON.stringify(mutation.data, null, 2)}</pre>
-      <p>{mutation.data?.appearance.color}</p>
-      <FishCard name={mutation.data?.name!} features={mutation.data?.appearance.features!} />
+      <div>
+        {mutation.data?.name && (
+          <FishCard
+            name={mutation.data?.name!}
+            features={mutation.data?.appearance.features!}
+            diet={mutation.data?.habits.diet!}
+            behavior={mutation.data?.habits.behavior!}
+            breed={mutation.data?.ecology.breed!}
+          />
+        )}
+      </div>
+      <pre className="text-xs">{JSON.stringify(mutation.data, null, 2)}</pre>
     </div>
   )
 }

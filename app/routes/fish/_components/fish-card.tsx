@@ -23,16 +23,19 @@ export default function FishCard(props: Props) {
           <CardTitle>{props.name}</CardTitle>
           <CardDescription>{props.features}</CardDescription>
         </CardHeader>
-        <div className="flex flex-col items-center justify-center">
-          <img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmIv0zWDLtkWrpwH9bspXe88TTjMLODVeNuU9F0gImScWEE8DX0qrHQ3Qgh_7oFcCnVdTAclrI9Xno8gAhm4TQkNmqsh5zA7xm4eKUWJ58Iu1Bo6ORKUIIJLbLOllo1ICXPjscfolJ1mU/s180-c/youkai_umibouzu.png"
-            alt="fish"
-          />
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <li>{props.diet}</li>
-          <li>{props.behavior}</li>
-          <li>{props.breed}</li>
+        <div className="flex flex-col space-y-8">
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src="https://www.aipictors.com/wp-content/uploads/2024/06/gQdAj5VXR1ebUwHZuKfPtJByn9Sr0W.webp"
+              alt="fish"
+              className="h-40 w-40"
+            />
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <li>{props.diet}</li>
+            <li>{props.behavior}</li>
+            <li>{props.breed}</li>
+          </div>
         </div>
       </CardContent>
     </Card>

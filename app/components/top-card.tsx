@@ -13,7 +13,9 @@ export function TopCard(props: Props) {
       <CardContent>
         <div className="flex flex-col items-center justify-center space-y-2 pt-6">
           <a href={`/${props.adress}`}>
-            <img src={props.image} alt="" className="h-40 w-40" />
+            <div className="flex items-center justify-center">
+              <img src={props.image} alt="" className="h-40 w-40" />
+            </div>
             <div className="flex justify-center">
               {`${props.title}はこちら`}
             </div>

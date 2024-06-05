@@ -18,11 +18,15 @@ export default function Index() {
   const chatImage =
     "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSGZpqkV7YwWFAMKWF4nsi4QIQUy4gHmDYGc1_yFAd0fLA6sIQZCaQeoeVGm8jv-gPY7dGwVIrC5GFxfMOQdhgpoVh42GvjUc3nUNU9KyaPxdM-kzw7HqUK1CC8UZU0BtOJFEKCaOaGm4/s180-c/idol_akusyu.png"
 
+  const fishImage =
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh1pRQqTF0AJmY9FkoFPzDNPuN5JRbvnbhvDtuofK7rWMV-OIEfbr14VepX1F5oKC0CLjlP0LqJsTBQInCCScICpqAvbhkrvezD0BdvSV0Gn5llPXZ2E8nfNiZRSR5lBGqqHsvdmrhZbdj/s180-c/suizokukan_jinbeizame.png"
+
   return (
     <div className="flex space-x-4 p-8">
       <TopCard adress="flash" image={sorobanImage} title="フラッシュ暗算" />
       <TopCard adress="fortune" image={fortuneImage} title="おみくじ" />
       <TopCard adress="chat" image={chatImage} title="AIチャット" />
+      <TopCard adress="fish" image={fishImage} title="架空の海洋生物図鑑" />
     </div>
   )
 }

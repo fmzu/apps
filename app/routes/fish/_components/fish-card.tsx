@@ -1,4 +1,3 @@
-import {} from "~/components/ui/avatar"
 import {
   Card,
   CardContent,
@@ -9,10 +8,10 @@ import {
 
 type Props = {
   name: string
+  subject: string
+  alias: string
   features: string
-  diet: string
-  behavior: string
-  breed: string
+  summary: string
 }
 
 export default function FishCard(props: Props) {
@@ -21,7 +20,10 @@ export default function FishCard(props: Props) {
       <CardContent className="items-center justify-center bg-blue-300">
         <CardHeader className="items-center justify-center">
           <CardTitle>{props.name}</CardTitle>
-          <CardDescription>{props.features}</CardDescription>
+          <CardDescription>
+            <p>{`科目: ${props.subject}`}</p>
+            <p>{`別名: ${props.alias}`}</p>
+          </CardDescription>
         </CardHeader>
         <div className="flex flex-col space-y-8">
           <div className="flex flex-col items-center justify-center">
@@ -32,9 +34,8 @@ export default function FishCard(props: Props) {
             />
           </div>
           <div className="flex flex-col items-center justify-center">
-            <li>{props.diet}</li>
-            <li>{props.behavior}</li>
-            <li>{props.breed}</li>
+            <p>{`見た目：${props.features}`}</p>
+            <p>{`特徴${props.summary}`}</p>
           </div>
         </div>
       </CardContent>

@@ -36,10 +36,10 @@ export default function FishPage() {
         {mutation.data?.name && (
           <FishCard
             name={mutation.data?.name!}
+            subject={mutation.data?.subject!}
+            alias={mutation.data?.alias!}
             features={mutation.data?.appearance.features!}
-            diet={mutation.data?.habits.diet!}
-            behavior={mutation.data?.habits.behavior!}
-            breed={mutation.data?.ecology.breed!}
+            summary={mutation.data?.summary!}
           />
         )}
       </div>

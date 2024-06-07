@@ -8,9 +8,11 @@ export const loader: LoaderFunction = async () => {
   })
 
   const message = `
-  新種の海の生物を考案して以下の形式のJSONを日本語で応答してください。名前は偏りのないようにしてください。
+  新種の海の生物を考案して以下の形式のJSONを日本語で応答してください。名前は色々な名前で、偏りのないようにしてください。設定はすべて存在する魚と同じようにしてください。要約は60文字以上80文字以内ですべての要素を含めてください。
   {
     名前: "string",
+    別名: "string",
+    科目: "string",
     分類: "string",
     外観: {
       色: "string",
@@ -29,11 +31,14 @@ export const loader: LoaderFunction = async () => {
       天敵: "string",
       繁殖: "string",
     },
+    要約: "string",
   }
   `
 
   const schema = object({
     名前: string(),
+    別名: string(),
+    科目: string(),
     分類: string(),
     外観: object({
       色: string(),
@@ -52,6 +57,7 @@ export const loader: LoaderFunction = async () => {
       天敵: string(),
       繁殖: string(),
     }),
+    要約: string(),
   })
 
   const completion = await openai.chat.completions.create({
@@ -82,6 +88,8 @@ export const loader: LoaderFunction = async () => {
 
   const json = {
     name: validationResult.output.名前,
+    alias: validationResult.output.別名,
+    subject: validationResult.output.科目,
     classification: validationResult.output.分類,
     appearance: {
       color: validationResult.output.外観.色,
@@ -100,6 +108,7 @@ export const loader: LoaderFunction = async () => {
       predators: validationResult.output.生態.天敵,
       breed: validationResult.output.生態.繁殖,
     },
+    summary: validationResult.output.要約,
   }
 
   return new Response(JSON.stringify(json), {

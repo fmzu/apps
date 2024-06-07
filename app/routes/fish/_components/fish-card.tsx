@@ -17,7 +17,7 @@ type Props = {
 export default function FishCard(props: Props) {
   return (
     <Card className="max-w-lg items-center justify-center">
-      <CardContent className="items-center justify-center bg-blue-300">
+      <CardContent className="items-center justify-center">
         <CardHeader className="items-center justify-center">
           <CardTitle>{props.name}</CardTitle>
           <CardDescription>

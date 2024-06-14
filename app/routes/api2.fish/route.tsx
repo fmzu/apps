@@ -4,7 +4,7 @@ import { number, object, safeParse, string } from "valibot"
 
 export const loader: LoaderFunction = async () => {
   const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.OPENAI_API_TOKEN,
   })
 
   const message = `

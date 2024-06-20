@@ -19,18 +19,23 @@ export default function Index() {
     "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwQ0Rt_D5XNRWZ9ml1fe39qosoTwotUwGotjtghs17btdS-iHGkU_2-05n56v3XRZoNfQ-FO7zNUNRDxdTkFvJhqvhlHwoaUyjrCyzEiOFPJ568w3PFs31k_z89fQ0eNppyrb93-26KTf1/s180-c/otaku_girl_fashion.png"
 
   return (
-    <div className="flex h-screen space-x-4">
+    <div className="flex h-screen">
       <ChatNavigation iconImage={iconImage} />
-      <div className="flex w-full flex-col pr-2">
-        <div className="flex min-h-16 items-center">
+      <div className="flex w-screen flex-col">
+        <div className="flex min-h-16 items-center px-4">
           <p className="font-bold">{"アイちゃん"}</p>
         </div>
-        <Separator />
+        <div className="px-4">
+          <Separator />
+        </div>
         <div className="flex flex-col">
-          <div className="flex h-full flex-col pb-20">
+          <div className="flex h-full flex-col px-4 pb-20">
             {messages.length > 0
               ? messages.map((m) => (
-                  <div key={m.id} className="space-y-4 whitespace-pre-wrap p-4">
+                  <div
+                    key={m.id}
+                    className="space-y-4 whitespace-pre-wrap py-2"
+                  >
                     {m.role === "user" ? (
                       <div className="flex items-center space-x-4">
                         <Avatar>
@@ -56,7 +61,7 @@ export default function Index() {
                 ))
               : null}
           </div>
-          <div>
+          <div className="fixed bottom-0 w-full bg-gray-800 p-4">
             <ChatSendInput
               input={input}
               handleInputChange={handleInputChange}

@@ -4,6 +4,7 @@ import ChatNavigation from "./_components/chat-navigation"
 import { Separator } from "~/components/ui/separator"
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar"
 import ChatSendInput from "./_components/chat-send-input"
+import ChatSettingDailog from "./_components/chat-setting-dialog"
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,8 +23,9 @@ export default function Index() {
     <div className="flex h-screen">
       <ChatNavigation iconImage={iconImage} />
       <div className="flex w-screen flex-col">
-        <div className="flex min-h-16 items-center px-4">
+        <div className="flex min-h-16 items-center justify-between px-4">
           <p className="font-bold">{"AI"}</p>
+          <ChatSettingDailog />
         </div>
         <div className="px-4">
           <Separator />

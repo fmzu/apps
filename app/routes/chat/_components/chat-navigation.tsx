@@ -26,7 +26,7 @@ export default function ChatNavigation(props: Props) {
             <AvatarFallback>{"CN"}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
-            <p className="font-bold">{"アイちゃん"}</p>
+            <p className="font-bold">{"AI"}</p>
             <p className="opacity-80">{"title"}</p>
           </div>
         </div>

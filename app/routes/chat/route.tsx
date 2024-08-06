@@ -23,7 +23,7 @@ export default function Index() {
       <ChatNavigation iconImage={iconImage} />
       <div className="flex w-screen flex-col">
         <div className="flex min-h-16 items-center px-4">
-          <p className="font-bold">{"アイちゃん"}</p>
+          <p className="font-bold">{"AI"}</p>
         </div>
         <div className="px-4">
           <Separator />
@@ -53,7 +53,7 @@ export default function Index() {
                           <AvatarImage src={iconImage} alt="@shadcn" />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
-                        <p className="font-bold">{"アイちゃん"}</p>
+                        <p className="font-bold">{"AI"}</p>
                       </div>
                     )}
                     {m.content}
